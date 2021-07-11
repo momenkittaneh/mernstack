@@ -1,2 +1,3 @@
 # mernstack
-mernstack axsos codingdojo
+mernstack 
+god helps us 
