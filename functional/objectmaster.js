@@ -19,7 +19,7 @@ const pokemon = Object.freeze([
     { "id": 122, "name": "Mr. Mime",   "types": ["psychic"] },
     { "id": 133, "name": "Eevee",      "types": ["normal"] },
     { "id": 144, "name": "Articuno",   "types": ["ice", "flying"] },
-    { "id": 145, "name": "Zapdos",     "types": ["electric"copy, "flying"] },
+    { "id": 145, "name": "Zapdos",     "types": ["electric", "flying"] },
     { "id": 146, "name": "Moltres",    "types": ["fire", "flying"] },
     { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
 ]);
