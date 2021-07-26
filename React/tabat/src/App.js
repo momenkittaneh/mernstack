@@ -1,10 +1,11 @@
+import logo from './logo.svg';
 import './App.css';
-import UserForm from './components/UserForm';
+import Tabs from './components/Tabs';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <UserForm /> 
+        <Tabs />
       </header>
     </div>
   );

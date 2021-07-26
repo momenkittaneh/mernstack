@@ -12,10 +12,9 @@ function Boxgen(props) {
         <>
                     <form onSubmit={ createbox }>
             <div>
-                <label>Username: </label> 
+                <label>color</label> 
                 <input type="text" onChange={ (e) => setcolor(e.target.value) } />
                 <input type="submit" value="Create box" />
-
             </div>
         </form>
         </>
