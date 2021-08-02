@@ -7,9 +7,9 @@ function Planets(props) {
     // let whatisit = props.id
     useEffect( () => {
         axios
-            .get('https://swapi.dev/api/planets/' +  props.id)
+            .get('https://swapi.dev/api/planets/' + props.id)
             .then(response => { setalberto(response.data) } )
-            .catch(navigate('/error'))
+            .catch(res=>console.log(res))
     }, [ props.id]);
 
     return (

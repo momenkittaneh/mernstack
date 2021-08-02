@@ -9,7 +9,7 @@ function App() {
         <Home />
         
         <Router>
-        <People path="/people/:id/" />
+        <People path='/people/:id/' />
         <Planets path='/planets/:id' />
         </Router>
     </div>

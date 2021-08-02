@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import {navigate} from '@reach/router'
 function Home(props) {
-    const [marsello,setmarsello] = useState("");
-    const [myid,setmyid] = useState();
+    const [marsello,setmarsello] = useState("people");
+    const [myid,setmyid] = useState(1);
 
     const whatitneed= (e)=>{
         setmarsello(e.target.value)
@@ -14,7 +14,7 @@ function Home(props) {
     }
     const handlework = (e) => {
         e.preventDefault();
-        navigate('/' + marsello + '/' + myid)
+        navigate(`/${marsello}/${myid}`)
 
     }
 

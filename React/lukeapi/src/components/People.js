@@ -9,7 +9,9 @@ function People(props) {
         axios
             .get('https://swapi.dev/api/people/' + props.id)
             .then(response => { sethero (response.data) } )
-            .catch( navigate('/error'))
+            .catch(res=>console.log(res))
+
+            // .catch( navigate('/error'))
     }, [props.id]);
 
     return (
