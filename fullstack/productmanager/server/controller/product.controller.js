@@ -16,11 +16,13 @@ module.exports.createProduct = (request, response) => {
         .then(Product => response.json(Product))
         .catch(err => response.json(err));
 }
-module.exports.findallproduct= (request,response) =>{
+
+module.exports.findallproduct = (request, response) => {
     Product.find()
-    .then(allproduct =>response.json({Products : allproduct}))
+    .then(prod => response.json(response.json(prod)))
     .catch(err => response.json({ message: "Something went wrong", error: err}))
-}
+};
+
 
 module.exports.findoneproduct=(request,response) =>{
     Product.findOne({_id:request.params.id})

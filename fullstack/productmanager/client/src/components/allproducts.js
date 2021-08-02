@@ -4,19 +4,23 @@ import {Link} from '@reach/router';
 import { useEffect,useState } from 'react';
 
 export default props => {
-    const [Products,setProduct] = useState([])
-    useEffect(() => {
-      axios.get('http://localhost:8000/api/products')
-      .then(res => {
-          setProduct(res.data);
-      })
-  })
-console.log(Products)
-    
+//     const [Products,setProduct] = useState([])
+//     useEffect(() => {
+//       axios.get('http://localhost:8000/api/products')
+//       .then(res => {
+//           setProduct(res.data);
+//       })
+//   })    
     return (
         <div>
-            {Products.map((Products, idx) => {
-                return <h3 key={idx}><Link to={`/${Products._id}`}>{Products.title}</Link></h3>
+        {props.Products.map((product, idx) => {
+                return (
+                    <div key={idx}>
+                        <Link to={`/${product._id}`}>
+                            <h3>{product.Title}</h3> 
+                        </Link>
+                    </div>
+                )
             })}
         </div>
     )
