@@ -26,17 +26,18 @@ module.exports.findallproduct = (request, response) => {
 
 module.exports.findoneproduct=(request,response) =>{
     Product.findOne({_id:request.params.id})
-    .then(myproduct =>response.json({Product:myproduct}))
+    .then(myproduct =>response.json(myproduct))
     .catch(err => response.json({ message: "Something went wrong", error: err}))
 
 }
 module.exports.updateproduct=(request,response) =>{
     Product.findOneAndUpdate({ _id: request.params.id }, request.body, { new: true })
-    .then(updateproduct =>response.json({Product : updateproduct}))
+    .then(updateproduct =>response.json(updateproduct))
     .catch(err => response.json({ message: "Something went wrong", error: err}))
 }
+
 module.exports.deleteproduct = (request,response) =>{
     Product.deleteOne({ _id: request.params.id })
-    .then(removed => response.json({result:removed}))
+    .then(removed => response.json(removed))
     .catch(err => response.json({ message: "Something went wrong", error: err}))
 }
