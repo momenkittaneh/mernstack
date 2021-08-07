@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from '@reach/router';
 import { useEffect,useState } from 'react';
 import DeleteButton from './DeleteButton';
-export default props => {
+export default  props => {
     const [Products, setProducts] = useState([]);
     useEffect(() => {
         axios.get('http://localhost:8000/api/products')

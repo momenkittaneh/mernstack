@@ -1,4 +1,3 @@
-const { response } = require('express');
 const { Product } = require('../models/product.models');
 module.exports.index = (request, response) => {
     response.json({
